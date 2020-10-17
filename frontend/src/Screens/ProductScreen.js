@@ -6,8 +6,8 @@ import { detailsProduct } from "../actions/productActions";
 
 function ProductScreen (props) {
 
-    // const [qty, setqty] = useState(1);
-    // value={qty} onChange={(event) => {setqty(event.target.value)}}
+    const [qty, setqty] = useState(1);
+    
     
     const productDetails = useSelector(state => state.productDetails);
     const {product, loading, error} = productDetails;
@@ -20,6 +20,14 @@ function ProductScreen (props) {
         };
     }, [])
     
+    function setQuantity(event){
+        setqty(event.target.value);
+    }
+
+    const handleAddToCart = () => {
+        //to redirect to another url
+        props.history.push("/cart/" + props.match.params.id + "?qty=" +qty);
+    }
 
     return  (<div>
     <div className="back-to-result">
@@ -56,18 +64,24 @@ function ProductScreen (props) {
                     Price: {product.price}
                 </li>
                 <li>
-                    Status: {product.status}
+                    Status: {product.countInStock > 0 ? "In Stock" :"Unavailable"}
                 </li>
                 <li>
-                    Qty: <select >
-                        <option>1</option>
+                    Qty: <select value={qty} onChange={setQuantity}>
+                        {/* <option>1</option>
                         <option>2</option>
                         <option>3</option>
-                        <option>4</option>
+                        <option>4</option> */}
+
+                        {[...Array(product.countInStock).keys()].map(x => 
+                        <option key={x+1} value = {x+1}>{x+1}</option>)}
+
                     </select>
                 </li>
                 <li>
-                    <button className="button">Add to Cart</button>
+                            {product.countInStock > 0 ?
+                    <button onClick = {handleAddToCart} className="button">Add to Cart</button> :
+                    <div> Out of Stock</div>}
                 </li>
             </ul>
         </div>
