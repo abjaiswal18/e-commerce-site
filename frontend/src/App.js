@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
+import ProductsScreen from "./screens/ProductsScreen";
 import CartScreen from './screens/CartScreen';
 import "js-cookies";
 import SigninScreen from './screens/SigninScreen';
@@ -54,6 +55,7 @@ function App() {
             </aside>
             <main className="main">
                 <div className="content">
+                <Route path="/products" component={ProductsScreen} />
                 <Route path="/signin" component={SigninScreen} />
                 <Route path="/register" component={RegisterScreen} />
                 <Route path="/product/:id" component={ProductScreen} />
