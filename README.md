@@ -51,4 +51,78 @@
 4.Handle the countInStock and quantity button with add to cart button redirects to card screen
   -Handle Add To Cart in ProductScreen.js
 
-5.
+5.Create README.md
+
+6.7.8.Build CartScreen with redux along with delete button
+  -Implement Add to Cart Action
+  -create addToCart constants, actions and reducers
+  -add reducer to store.js
+  -use action in CartScreen.js
+  -render cartItems.length
+  -Build Cart Screen
+  -create 2 columns for cart items and cart action
+  -cartItems.length === 0 ? cart is empty
+  -show item image, name, qty and price
+  -Proceed to Checkout button
+  -Implement remove from cart action
+  -Implement Remove From Cart Action
+  -create removeFromCart constants, actions and reducers
+  -add reducer to store.js
+  -use action in CartScreen.js
+
+9. Added a cookie
+
+10.Removed some error in the project while adding a cookie
+
+11.Connet to mongoose
+  -Create Sample Users In MongoDB
+  -npm install mongoose
+  -connect to mongodb
+  -create config.js
+  -npm install dotenv
+  -export MONGODB_URL
+  -create models/userModel.js
+  -create userSchema and userModel
+  -create userRoute
+  -Seed sample data
+  -Create Sample Products In MongoDB
+  -create models/productModel.js
+  -create productSchema and productModel
+  -create productRoute
+  -Seed sample data
+
+12.Added signin screen(backend)
+  -create /signin api
+  -check email and password
+  -generate token
+  -install json web token
+  -install dotenv
+  -return token and data
+  -test it using postman
+  -Design SignIn Screen
+  -create SigninScreen
+  -render email and password fields
+  -create signin constants, actions and reducers
+  -Update Header based on user login
+  -Implement SignIn Action
+  -create signin constants, actions and reducers
+  -add reducer to store.js
+  -use action in SigninScreen.js
+
+13.Added register screen
+  -create API for /api/users/register
+  -insert new user to database
+  -return user info and token
+  -create RegisterScreen
+  -Add fields
+  -Style fields
+  -Add screen to App.js
+  -create register action and reducer
+  -check validation and create user
+
+14.Created productsScreen to create a product and getting it from backend
+
+15.Created edit, delete and create product button
+
+
+
