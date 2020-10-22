@@ -50,3 +50,5 @@
   
 4.Handle the countInStock and quantity button with add to cart button redirects to card screen
   -Handle Add To Cart in ProductScreen.js
+
+5.
