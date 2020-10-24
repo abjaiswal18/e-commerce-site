@@ -124,5 +124,27 @@
 
 15.Created edit, delete and create product button
 
+16.second Part Branch
+
+Now in secondPart branch only
+
+17.Added Shipping screen in checkout wizard
+  -create CheckoutSteps.js component
+  -create shipping fields
+  -implement shipping constant, actions and reducers
+
+18.Added payment screen in checkout wizard
+  -create payment fields
+  -implement shipping constant, actions and reducers
+
+19.Added PlaceOrder screen, Checkout Wizard is complete
+  -design order summary fields
+  -design order action
+
+
+
+
+
+
 
 
