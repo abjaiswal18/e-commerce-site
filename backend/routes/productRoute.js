@@ -13,7 +13,7 @@ router.get("/", async (req,res)=> {
 });
 
 router.get("/:id", async (req,res)=> {
-  const products = await Product.findOne({_id: req.params.id});
+  const product = await Product.findOne({_id: req.params.id});
   if(product){
     res.send(product);
   }else{

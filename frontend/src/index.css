@@ -431,3 +431,7 @@ tbody>tr:nth-child(odd){
    font-weight: bold;
 
  }
+
+ .placeorder-actions-payment > div {
+  width: 100%;
+}
