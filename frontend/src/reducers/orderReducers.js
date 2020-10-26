@@ -17,12 +17,12 @@ function orderCreateReducer(state = {}, action) {
 }
 
 
-function orderDetailsReducer(state = {
-  order: {
-    orderItems: [],
-    shipping: {},
-    payment: {}
-  }
+function orderDetailsReducer(state = { loading: true
+  // order: {
+  //   orderItems: [],
+  //   shipping: {},
+  //   payment: {}
+  // }
 }, action) {
   switch (action.type) {
     case ORDER_DETAILS_REQUEST:

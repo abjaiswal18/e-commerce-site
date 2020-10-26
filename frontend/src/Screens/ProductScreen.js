@@ -37,7 +37,7 @@ function ProductScreen (props) {
    ( error ? (<div>{error}</div>) :
     (<div className="details">
         <div className="details-image">
-            <img src={product.images} alt="product" ></img>
+            <img src={product.image} alt="product" ></img>
         </div>
         <div className="details-info">
             <ul>
