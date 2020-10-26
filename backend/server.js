@@ -1,6 +1,4 @@
 import express from "express";
-import data from "./data";
-import dotenv from "dotenv";
 import config from "./config";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
@@ -8,7 +6,6 @@ import userRoute from "./routes/userRoute";
 import productRoute from "./routes/productRoute";
 import orderRoute from "./routes/orderRoute";
 
-dotenv.config();
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose.connect(mongodbUrl, {
@@ -19,6 +16,9 @@ mongoose.connect(mongodbUrl, {
 
 const app = express();
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, '/../frontend/build')));
+
 
 app.use("/api/users", userRoute);
 app.use("/api/products",productRoute);
@@ -43,6 +43,6 @@ app.get("/api/config/paypal", (req,res) => {
 // });
 
 
-app.listen(process.env.PORT || 5000, function(){
+app.listen(config.PORT || 5000, function(){
     console.log("Server started at port no. 5000");
 });
