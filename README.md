@@ -141,9 +141,39 @@ Now in secondPart branch only
   -design order summary fields
   -design order action
 
+20. OrderScreen is created
+  -build order api for /api/orders/:id
+  -create OrderScreen.js
+  -dispatch order details action in useEffect
+  -load data with useSelector
+  -show data like place order screen
+  -create order details constant, action and reducer
+  
+21. Connected to paypal
+  -get client id from paypal
+  -set it in .env file
+  -create route form /api/paypal/clientId
+  -create getPaypalClientID in api.js
+  -add paypal checkout script in OrderScreen.js
+  -show paypal button
 
+22.Connect to paypal API(removed previous error)
+  -update order after payment
+  -create payOrder in api.js
+  -create route for /:id/pay in orderRouter.js
+  -rerender after pay order
 
+23.Created user Profile screen
+  -create user details api
+  -show user information
+  -create user update api
+  -update user info
+  
+24.Added ordersScreen for admin to manage order
 
+25.Added Filter and sort option in homescreen
+
+26. Publish to heroku
 
 
 
